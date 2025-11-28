@@ -1,4 +1,8 @@
+import { signIn } from "@/auth";
 import { TextField } from "@mui/material";
+import { FcGoogle } from "react-icons/fc";
+import { SiGithub } from "react-icons/si";
+signIn
 
 export default function Login () {
     return (
@@ -19,9 +23,24 @@ export default function Login () {
                 size="small"/>
                 <button type="submit" className="w-full text-white rounded-md h-10 bg-blue-500 hover:opacity-40 p-3 mt-2">Continue</button>
             </div>
-
+         </form>
+        <p className="text-center text=gray-700">or sign up with</p>
+        <div className="flex justify-center gap-4">
+        <form action={async ()=>{
+            "use server"
+            await signIn()
+        }}
+        className="justify-items-center">
+            <button type="submit" className="w-10 h-10 border rounded-md shadow-lg border-gray-300 cursor-pointer">
+                <FcGoogle className="text-4xl"/>
+            </button>
         </form>
-
+        <form>
+            <button type="submit" className="w-10 h-10 border rounded-md shadow-lg border-gray-300 cursor-pointer">
+                <SiGithub  className="text-4xl"/>
+            </button>
+        </form>
+         </div>
         </div>
 
 

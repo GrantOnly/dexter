@@ -9,7 +9,7 @@ export function Navbar () {
         setDropDown(!dropDown);
     }
     return (
-        <main className="bg-gray-100 shadow shadow-gray-300 w-full sticky top-0">
+        <main className="bg-gray-100 shadow shadow-gray-300 w-full sticky top-0 z-10">
             <div className="h-[50px] flex justify-between items-center px-5">
                 <h1 className="text-2xl font-bold text-blue-500">Dexter</h1>
                 <ul className="hidden md:text-sm font-semibold md:flex gap-10 cursor-pointer">
